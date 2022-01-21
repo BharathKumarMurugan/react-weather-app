@@ -3,7 +3,7 @@ import "./weather.css";
 import axios from "axios";
 
 function Weather() {
-  const API_KEY = "c8b4c4997c6ec2783a1b9f63f907a0f1";
+  const API_KEY = "";
   const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
   // const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("Chennai");

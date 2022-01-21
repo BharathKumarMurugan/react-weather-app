@@ -1,0 +1,181 @@
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #161623;
+  overflow: hidden;
+}
+section::before{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#ffc107, #e91e63);
+  border-radius: 50%;
+  transform: translate(-250px, -120px);
+}
+section::after{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#2196f3, #31ff38);
+  border-radius: 50%;
+  transform: translate(250px, 150px);
+}
+.main-container{
+  position: relative;
+  z-index: 100;
+}
+.container{
+  position: relative;
+  width: 400px;
+  min-height: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.container .container__form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+input{
+  position: relative;
+  display: inline-block;
+  font-size: 0.7em;
+  box-sizing: border-box;
+  transition: .5s;
+}
+.container .container__form input[type=text] {
+  color: rgba(0, 0, 0, 0.7);
+  width: 280px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 50px 0 0 50px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-right: none;
+  border-bottom: none;
+}
+.container .container__form input[type=text]:focus{
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+  border-right: transparent;
+}
+.container .container__form input[type=button]{
+  position: relative;
+  width: 54px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 50px 50px 0;
+  padding: 2px 5px;
+  cursor: pointer;
+  background-color: rgba(255, 255,255 , 0.5);
+  border-left: none;
+  border-bottom: none;
+}
+.container .container__form input[type=button]:hover{
+  background-color: rgba(255, 255,255 , 0.55);
+}
+.container__city{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.container__temperature{
+  margin-bottom: 1rem;
+}
+.container__temperature .temperature,
+.container__temperature .temperature__description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.temperature #temperature__celcius{
+  font-size: 3rem;
+  font-weight: 600;
+  /* color: rgba(255, 255,255 , 0.85); */
+  color: transparent;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.35);
+  -webkit-text-stroke-width: 1px;
+  /* text-shadow: #2196f3e6 0px 0px 12px; */
+  text-shadow: rgb(255 255 255 / 65) 0px 0px 10px;
+}
+.temperaure__celcius-superscript{
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-left: 4px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.35);
+  -webkit-text-stroke-width: 1px;
+}
+.temperaure__celcius-superscript::before{
+  content: '\00B0';
+}
+.temperature__description{
+  color: #efefef;
+  /* opacity: 0.8; */
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-shadow: #26b6b6 0px 0px 2px;
+}
+.container__moreDetails{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__moreDetails .moreDetails__humidity{
+  width: 368px;
+  min-height: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.moreDetails__humidity .row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+.moreDetails__humidity .row .col-6{
+  width: 50%;
+  margin: 0 12px;
+  height: 50px;
+  padding: 4px 10px;
+  text-align: center;
+}
+.row .col-6 .temp-properties__key{
+  font-size: 10px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.9)
+}
+.row .col-6 .temp-properties__value{
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8)
+}
+#real-feal::before{
+  content: '\00B0';
+}
